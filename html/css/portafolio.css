@@ -73,5 +73,63 @@ section #main{
 
 #main video{
     width: 100%;
-    height: 100%;
+    height: 100vh;
+}
+
+
+#main #overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    /*background-image: url(../img/patron2.png);*/
+    background-repeat: repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    /*opacity:0.2;*/
+}
+
+#main #overlay h2{
+    margin-top: 300px;
+    color: white;
+    text-align: center;
+    font-size: 6rem;
+    opacity: 1;
+}
+
+#main #overlay h3{
+    text-align: center;
+    color:white;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 2rem;
+}
+
+.btn{
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    padding:15px;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.btnPrimary{
+    background-color: var(--main-color);
+    color: white;
+    text-transform: uppercase;
+    padding-left: 2;
+    transition: 0.5s ease-in-all;
+}
+
+.btnPrimary:hover{
+    opacity: 0.8;
+    background-color: white;
+    color: var(--main-color);
+}
+
+a.btn{
+    text-decoration: none;
+    color: white;
 }
