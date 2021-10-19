@@ -69,23 +69,25 @@ header nav ul li a:hover{
 section #main{
     background-color: black;
     height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
 #main video{
-    width: 100%;
-    height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 
 #main #overlay{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0,0,0,0.8);
     /*background-image: url(../img/patron2.png);*/
     background-repeat: repeat;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left:0;
     z-index: 3;
     /*opacity:0.2;*/
 }
@@ -96,6 +98,7 @@ section #main{
     text-align: center;
     font-size: 6rem;
     opacity: 1;
+    font-family: 'Festive', cursive;
 }
 
 #main #overlay h3{
@@ -132,4 +135,133 @@ section #main{
 a.btn{
     text-decoration: none;
     color: white;
+}
+
+#about, #contacto, #portafolio{
+    background-color: rgb(245, 225, 223);
+    width: 80%;
+    height: 600px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#about .col, #contacto .col{
+    float: left;
+    width: 50%;
+    text-align: justify;
+}
+
+#about > h2{
+    font-family: 'Festive', cursive;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 30px;
+}
+
+#about > .col >h2{
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#about .col img{
+    width: 70%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 30px;
+}
+
+#about .col p{
+    margin-top: 30px;
+}
+
+#frase{
+    background-color: var(--main-color);
+    width: 100%;
+    height: 250px;
+}
+
+#frase p{
+    text-align: center;
+    font-family: 'Festive', cursive;
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+#contacto iframe{
+    padding-top: 50px;
+}
+
+#contacto .col{
+    padding-top: 50px;
+}
+
+#contacto p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#contacto input{
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+    width: 70%;
+    font-size: 1rem;
+}
+
+#contacto #coment{
+    height: 100px;
+}
+
+fieldset {
+    border: 0px;
+}
+
+#inferior{
+    background-color: var(--main-color);
+    width: 100%;
+    height: 80px;
+    padding-top: 20px;
+}
+
+#inferior p{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#portafolio{
+    height: 520px;
+}
+
+#portafolio .caja{
+    border-radius: 30px;
+    float: left;
+    width: 23.3%;
+    height: 340px;
+    background-color: white;
+    margin: 0.5%;
+    text-align: center;
+}
+
+.caja img{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 100%;
+}
+
+.caja h3{
+    margin-top: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.caja p{
+    margin: 10px;
+    font-size: .8rem;
 }
