@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Festive&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="./css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
@@ -19,16 +21,21 @@
         <nav class="item">
             <ul>
                 <li>
-                    <a href="#">Inicio</a>
+                    <a href="#main" data-scroll>Inicio</a>
                 </li>
                 <li>
-                    <a href="#">Sobre mi</a>
+                    <a href="#about" data-scroll>Sobre mi</a>
                 </li>
                 <li>
-                    <a href="#">Portafolio</a>
+                    <a href="#portafolio" data-scroll>Portafolio</a>
                 </li>
                 <li>
-                    <a href="#">Contacto</a>
+                    <a href="#contacto" data-scroll>Contacto</a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
                 </li>
             </ul>
 
@@ -40,10 +47,10 @@
                 <source src="./img/video.mp4" type="video/mp4">
             </video>
             <div id="overlay">
-                <h2>
+                <h2 data-aos="fade-in">
                     Bienvenidos a mi portafolio
                 </h2>
-                <h3>
+                <h3 data-aos="fade-left">
                     Angela Sánchez <br>
                     Desarrollador WEB <br>
                     <br><a href="#" class="btn btnPrimary">Contactar</a>
@@ -54,7 +61,7 @@
 
         <h2>About Me</h2>
         <div class="col">
-            <img src="./img/foto-mia.jpg" alt="">
+            <img src="./img/foto-mia.jpg" data-aos="flip-left">
         </div>
 
         <div class="col">
@@ -109,9 +116,9 @@
             <br>Brian Kernigan
         </p>
     </div>
-    <div id="contacto">
+    <section id="contacto">
         <div class="col">
-            <h2>Contacto</h2>
+            <h2>Contacto <i class="fas fa-user"></i></h2>
             <fieldset>
                 <p>Nombre</p>
                 <input type="text" placeholder="Nombre">
@@ -120,19 +127,24 @@
                 <p>Teléfono</p>
                 <input type="text" placeholder="Teléfono">
                 <p>Comentario</p>
-                <input id="coment" type="text">
+                <textarea name="" id="" cols="" rows="10"></textarea>
                 <br><br><br><a href="#" class="btn btnPrimary">Enviar</a>
             </fieldset>
         </div>
         <div class="col">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11510.11983309592!2d-107.87857371481192!3d30.3810742057315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86dcad4bca553657%3A0xabda349ebe8ed0fe!2sInstituto%20Tecnol%C3%B3gico%20Superior%20de%20Nuevo%20Casas%20Grandes!5e0!3m2!1ses-419!2smx!4v1634579081299!5m2!1ses-419!2smx" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
-    </div>
-    <div id="inferior">
+    </section>
+    <footer>
         <p>Angela Sánchez
         <br>Todos los derechos reservados.
         <br>2021</p>
-    </div>
-
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      AOS.init();
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
 </body>
 </html>
