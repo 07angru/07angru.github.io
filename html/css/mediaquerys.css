@@ -1,0 +1,61 @@
+@media (max-width: 700px){
+    header nav{
+        width:50px;
+    }
+    header #menuMovil{
+        display: block;
+    }
+    header #menuWeb{
+        display: none;
+    }
+
+    #main video{
+        display: none;
+    }
+    #main #overlay{
+        background-image: url(../img/patron2.png);
+        height: auto+100px;
+        background-repeat: repeat;
+    }
+
+    #main #overlay h2{
+        margin-top: 100px;
+        color: black;
+    }
+
+    #main #overlay h3{
+        color: black;
+    }
+
+    header{
+        top: 0px;
+    }
+    
+    #about{
+        margin-top: 650px;
+        height: 820px;
+    }
+
+    #about .col, #contacto .col{
+        width:100%;
+    }
+
+    #portafolio{
+    height: 1820px;
+    }
+
+    #portafolio .caja{
+        margin-top: 15px;
+        width: 100%;
+        height: 410px;
+    }
+
+    #frase p{
+        padding-top: 25px;
+        font-size: 2.5rem;
+    }
+
+    #contacto{
+        height: 1150px;
+    }
+}

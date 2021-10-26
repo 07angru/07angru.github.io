@@ -41,6 +41,10 @@ header nav{
     width: 600px;
 }
 
+header #menuMovil{
+    display: none;
+}
+
 header nav ul li{
     float: left;
     list-style: none;
@@ -84,7 +88,7 @@ section #main{
     height: 100%;
     background-color: rgba(0,0,0,0.8);
     /*background-image: url(../img/patron2.png);*/
-    background-repeat: repeat;
+    /*background-repeat: repeat;*/
     position: absolute;
     top: 0px;
     left:0;
@@ -140,7 +144,7 @@ a.btn{
 #about, #contacto, #portafolio{
     background-color: rgb(245, 225, 223);
     width: 80%;
-    height: 600px;
+    min-height: 600px;
     padding-left: 10%;
     padding-right: 10%;
 }
