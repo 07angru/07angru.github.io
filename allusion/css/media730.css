@@ -1,0 +1,8 @@
+@media (max-width: 730px){
+    header #menuMovil{
+        display: block;
+    }
+    header #menuWeb{
+        display: none;
+    }
+}

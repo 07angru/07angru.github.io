@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="./css/inicio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="./css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/media730.css" />
+    <link rel="stylesheet" href="./css/media640.css" />
+</head>
+<body>
+
+    <header>
+
+        <div id="logo">
+            <h1>Allusion</h1>
+        </div>
+
+        <nav>
+            <ul id="menuWeb">
+                <li>
+                    <a href="">PRODUCTOS</a>
+                </li>
+                <li>
+                    <a href="">ENTRAR <i class="fas fa-user"></i></a>
+                </li>
+                <li>
+                    <a href="">BUSCAR <i class="fas fa-search"></i></a>
+                </li>
+                <li>
+                    <a href="">CARRITO <i class="fas fa-shopping-cart"></i></a>
+                </li>
+            </ul>
+            <ul id="menuMovil">
+                <li>
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section id="titulo">
+        <p>Todos los productos idóneos para tu hogar</p>
+    </section>
+
+    <section id="fotos">
+        <div class="foto">
+            <img src="./img/Cocina.jpg" data-aos="flip-left">
+            <p>Todo para tu cocina</p>
+        </div>
+        <div class="foto">
+            <p>Todo para tu récamara</p>
+            <img src="./img/Recamara.jpg" data-aos="flip-left">
+        </div>
+        <div class="foto">
+            <img src="./img/Bano.jpg" data-aos="flip-left">
+            <p>Todo para tu baño</p>
+        </div>      
+    </section>
+
+    <footer>
+
+        <section id="texto">
+            <div id="logo02">
+                <h1>Allusion</h1>
+            </div>
+    
+            <section id="info">
+                <div class="col">
+                    <p>ALLUSION</p>
+                    <a href="#titulo" data-scroll>Inicio</a><br>
+                    <a href="">Regístrate</a>
+                </div>
+                <div class="col">
+                    <p>NOSOTROS</p>
+                    <a href="">Quiénes somos</a><br>
+                    <a href="">Contacto</a>
+                </div>
+            </section>
+        </section>
+
+        <section id="annio">
+            <hr>
+            <p>2021</p>
+        </section>
+
+    </footer>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script>
+      AOS.init();
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+</body>
+</html>
