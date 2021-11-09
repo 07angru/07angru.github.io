@@ -1,20 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght');
 :root{
     --p-amarillo:#f3d13f;
     --p-morado:#c516c5;
     --p-text:#0e0f0f;
+    --gris:#15181c;
 }
+
 *{
     margin:0px;
     padding:0px;
 }
+body{
+    background: black;
+    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
+}
 
-main{
+#login{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
 }
-main .col{
+#login .col{
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
@@ -22,51 +30,38 @@ main .col{
     height:100vh;
 }
 
-main .col:first-child{
+#login .col:first-child{
     flex: 2;
-    background-image:url(../img/intro/fondo.png);
+    background-image:url(../img/fondo.png);
     background-size: 100% 100%;
 }
-main .col:last-child{
+#login .col:last-child{
     /*este pading es como las manecillas del reloj*/
     padding: 100px 50px 0px 50px;
-    
-    /*background-image:url(../img/intro/fondopeluche.png);
+    /*background-image:url(../img/fondopeluche.png);
     background-size: 150% 100%;*/
 }
-
-#der{
-    flex-direction: row-reverse;
-    display: flex;
-
-}
-#logo{
-    display: block;
-    padding-right: 10px;
-    width: 50%;
-}
-
-main .col:last-child h1{
+#login .col:last-child h1{
     font-size: 2rem;
     text-align:right;
 } 
-main .col:last-child h1 img{
+#login .col:last-child h1 img{
     width: 300px;
 }
-main .col:last-child h2{
+#login .col:last-child h2{
     font-size: 1.4rem;
     text-align:right;
 } 
-main .col:last-child fieldset{
+fieldset{
     padding:5px;
     padding-top:20px;
     border:none;
 }
-main .col:last-child fieldset label{
+label{
     font-weight: lighter;
    
 }
-main .col:last-child fieldset input{
+input{
     padding:5px;
     height: 30px;
     outline-color: var(--p-amarillo);
@@ -78,7 +73,7 @@ main .col:last-child fieldset input{
 button{
     padding:5px 10px 5px 10px;
     background-color: var(--p-morado);
-    background-image:url(../img/intro/peluchemorado.jpg);
+    background-image:url(../img/peluchemorado.jpg);
     background-size: 100% 100%;
     border:2px solid var(--p-amarillo);
     border-radius:10px;
@@ -89,7 +84,99 @@ button{
     transition:0.5s ease-out all;
 }
 button:hover{
-    background-image:url(../img/intro/plucheazul.jpg);
+    background-image:url(../img/plucheazul.jpg);
     color: var(--p-amarillo);
     cursor:pointer;
+}
+
+/*INDEXXXXXXXXXXXXXXXXXXXXXXX*/
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    color:white;
+    height: 150px;
+}
+header > div, main aside{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+header > div:first-child img{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+header >div:nth-child(2),section#center{
+    flex: 2;
+    border-right: 1px solid var(--gris);
+    border-left: 1px solid var(--gris);
+}
+header h1{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+header #search input{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding-left: 5px;
+    background-color:var(--gris) ;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 100vh;
+}
+.imgUser{
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+    border:2px solid var(--p-amarillo);
+}
+#newPost, .post{
+   
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+#newPost >div:first-child,.post >div:first-child{
+    flex: 0.2;
+}
+#newPost >div:last-child, .post >div:last-child{
+    flex: 2;
+    padding: 5px;
+}
+#newPost >div:last-child >textarea{
+    resize: none;
+    background-color: transparent;
+    border: none;
+    outline-color: var(--p-text);
+    display: block;
+    width: 98%;
+    padding: 5px;
+    color:white;
+    font-size: 1.3rem;;
+}
+.card{
+    background-color: var(--gris);
+    margin: 20px;
+    width: calc(100% - 50px);
+    min-height: 200px;
+    padding: 5px;
+}
+.post >div:last-child{
+    color:white;
+}
+.post >div:last-child h2 span:last-child{
+    color:var(--gris);
+}
+.post .textTweet{
+ padding-top: 10px;
 }
