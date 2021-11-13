@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PTweet</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
     <label for="" id="usuario"></label>
@@ -59,6 +60,34 @@
                         aliquam maiores, ea necessitatibus ipsum modi placeat et unde enim 
                         atque quidem corrupti?
                     </div>
+                
+
+                    <div class="icons">
+                        <div>
+                            <i class = "fa fa-heart"></i> ${el.likes}
+                        </div>
+
+                        <div>
+                            <i class = "fa fa-share"></i> ${el.retweets}
+                        </div>
+
+                    </div>
+
+                    <div class="comentarios">
+                        <div>
+                            <img src="./img/${comentario.img}" alt="" class="imgUser" />
+                        </div>
+                        <div>
+                            <h2>
+                                <span>${comentario.nombre}</span>
+                                <span>@${comentario.username}</span>
+                            </h2>
+                            <div class="textTweet">
+                                ${comentario.comentario}
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
