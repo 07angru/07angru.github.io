@@ -1,48 +1,51 @@
 window.onload = () => {
-  //CARGAR JSON
-  let arrayElem = [];
+  //CARGAR PERIO TABLE JSON . JSON
 
-  var xobj = new XMLHttpRequest();
-  xobj.overrideMimeType("application/json");
-  xobj.open("GET", "./js/PeriodicTableJSON.json", true);
-  xobj.onreadystatechange = function () {
-    if (xobj.readyState == 4 && xobj.status == "200") {
-      let json = JSON.parse(xobj.responseText);
-      //console.log(arrayElem);
-      arrayElem = json.elements;
-      let todo = "";
-      arrayElem.forEach((element) => {
-        todo += `<li id="${element.name}"
-                class="${element.category}" 
-                data-id="${element.number}" 
-                data-sim="${element.symbol}" 
-                data-name="${element.name}"
-                data-descr="${element.summary}"
+  let arElem = [];
+
+  var xobjeto = new XMLHttpRequest();
+  xobjeto.overrideMimeType("application/json");
+  xobjeto.open("GET", "./js/PerioTable.json", true);
+  xobjeto.onreadystatechange = function () {
+    if (xobjeto.readyState == 4 && xobjeto.status == "200") {
+      let json = JSON.parse(xobjeto.responseText);
+      //console.log(arElem);
+      //07angru
+      arElem = json.elementosss;
+      let toall = "";
+      arElem.forEach((elmt) => {
+        toall += `<li id="${elmt.name}"
+                class="${elmt.category}" 
+                data-id="${elmt.number}" 
+                data-sym="${elmt.symbol}" 
+                data-name="${elmt.name}"
+                data-summ="${elmt.summary}"
                 onclick="crear()">
-                <abbr title="${element.name}">${element.symbol}</abbr>
+                <abbr title="${elmt.name}">${elmt.symbol}</abbr>
             </li>`;
-      }); //arrayElem
-      document.getElementsByClassName("periodic-table")[0].innerHTML = todo;
+      }); //arElem
+      document.getElementsByClassName("perio-table")[0].innerHTML = toall;
+      crear();
     }
   };
-  xobj.send(null);
+  xobjeto.send(null);
 };
 
 function crear() {
-    //CREAR EVENTOS
-
-    let elem = document.getElementsByTagName('li');
-    //console.log(elem.length);
-    for(let x=0; x<elem.length; x++){
-        elem[x].addEventListener('click',(e)=>{
-            //console.log(elem[x].innerHTML);
-            let nom = elem[x].getAttribute("data-name");
-            let des = elem[x].getAttribute("data-descr");
-            let sim = elem[x].getAttribute("data-sim");
-            document.getElementById("txtElemento").innerText=nom;
-            document.getElementById("txtSimbolo").innerText=sim;
-            document.getElementById("txtDescr").innerText=des;
-        });//elem
+    //PARA MOSTRAR EN DATA
+    //07angru
+    let elm = document.getElementsByTagName('li');
+    //console.log(elm.length);
+    for(let x=0; x<elm.length; x++){
+        elm[x].addEventListener('click',(e)=>{
+            //console.log(elm[x].innerHTML);
+            let nom = elm[x].getAttribute("data-name");
+            let des = elm[x].getAttribute("data-summ");
+            let sim = elm[x].getAttribute("data-sym");
+            document.getElementById("txtName").innerText=nom;
+            document.getElementById("txtSym").innerText=sim;
+            document.getElementById("txtSumm").innerText=des;
+        });//elm
 
     };//for
 

@@ -21,13 +21,13 @@
     color: #000;
     counter-reset: element;
   }
-  .periodic-table {
+  .perio-table {
     display: grid;
     grid-column-gap: .5vw;
     grid-row-gap: .5vw;
     padding-left: 0;
   }
-  .periodic-table > li {
+  .perio-table > li {
     display: flex;
     position: relative;
     justify-content: center;
@@ -38,7 +38,7 @@
     font-weight: bold;
     cursor: pointer;
   }
-  .periodic-table > li:before {
+  .perio-table > li:before {
     counter-increment: element; 
     content: counter(element);
     position: absolute;
@@ -47,7 +47,7 @@
     font-size: .9vw;
     font-weight: lighter;
   }
-  .periodic-table > li abbr {
+  .perio-table > li abbr {
     font-size: 2.5vw;
   }
   #Helium {
@@ -59,46 +59,46 @@
   #Cerium, #Thorium {
     grid-column-start: 4;
   }
-  .periodic-table > li:nth-child(n+58):nth-last-child(n+48) {
+  .perio-table > li:nth-child(n+58):nth-last-child(n+48) {
     grid-row-start: 8;
   }
-  .periodic-table > li:nth-child(n+90):nth-last-child(n+16) {
+  .perio-table > li:nth-child(n+90):nth-last-child(n+16) {
     grid-row-start: 9;
   }
-  .periodic-table:before {
+  .perio-table:before {
     display: block;
     content: '';
     grid-row: 8 / 10;
     grid-column: 1 / 4;
   }
-  .periodic-table .noble {
+  .perio-table .noble {
     background: rgb(234, 218, 36);
   }
-  .periodic-table .diatomic {
+  .perio-table .diatomic {
     background: rgb(234, 179, 127);
   }
-  .periodic-table .alkali {
+  .perio-table .alkali {
     background: hsl(326, 52%, 84%);
   }
-  .periodic-table #Hydrogen {
+  .perio-table #Hydrogen {
     background: rgb(163, 199, 210);  
   }
-  .periodic-table .alkaline {
+  .perio-table .alkaline {
     background: hsl(120, 52%, 84%);
   }
-  .periodic-table .unknown  {
+  .perio-table .unknown  {
     background: hsl(210, 2%, 73%);
   }
-  .periodic-table .lanthanide {
+  .perio-table .lanthanide {
     background: hsl(183, 54%, 84%);
   }
-  .periodic-table .actinide {
+  .perio-table .actinide {
     background: hsl(82, 60%, 56%);  
   }
-  .periodic-table .metalloid {
+  .perio-table .metalloid {
     background: hsl(142, 60%, 56%);  
   }
-  .periodic-table .polyatomic{
+  .perio-table .polyatomic{
     background: hsl(358, 60%, 56%);  
   }
 
@@ -119,29 +119,29 @@
     #Helium, #Boron, #Aluminium, #Cerium, #Thorium {
     grid-column-start: auto;
     }
-    .periodic-table {
+    .perio-table {
     grid-template-columns: 1fr 1fr 1fr;
     }
-    .periodic-table > li abbr {
+    .perio-table > li abbr {
       font-size: 0;
     }
-    .periodic-table > li {
+    .perio-table > li {
       padding: 1rem;
     }
-    .periodic-table > li abbr:after {
+    .perio-table > li abbr:after {
       content: attr(title);
       font-size: 2rem;
     }
-    .periodic-table > li:before {
+    .perio-table > li:before {
       font-size: 1rem;
     }
-    .periodic-table > li:nth-child(n+58):nth-last-child(n+48) {
+    .perio-table > li:nth-child(n+58):nth-last-child(n+48) {
     grid-row-start: auto !important;
   }
-    .periodic-table > li:nth-child(n+90):nth-last-child(n+16) {
+    .perio-table > li:nth-child(n+90):nth-last-child(n+16) {
       grid-row-start: auto !important;
     }
-    .periodic-table:before {
+    .perio-table:before {
       display: none !important;
     }
   }
@@ -149,16 +149,16 @@
     body {
       margin: 2vw;
     }
-    .periodic-table {
+    .perio-table {
       grid-template-columns: 1fr 1fr;
     }
-    .periodic-table > li {
+    .perio-table > li {
       height: auto;
       font-size: 3vw;
     }
   }
   @media all and (max-width: 550px) {
-    .periodic-table {
+    .perio-table {
       grid-template-columns: 1fr;
     }
   }
