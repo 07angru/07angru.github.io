@@ -1,0 +1,12 @@
+
+.row{
+    padding-top: 20px;
+}
+
+img{
+    height: 25%;
+}
+
+.container .row .form-select{
+    margin-left: 20px;
+}
